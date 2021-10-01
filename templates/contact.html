@@ -1,0 +1,193 @@
+{% extends 'base.html '%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+{% block content %}
+    <style>
+
+        .bg-cover
+        {
+            background-image:url('/static/rr1.jpg');
+            background-attachment:scroll;
+            background-repeat: no-repeat;
+            padding: 20px;
+            margin: 1px;
+            background-position:center center top;
+            background-size: 100%;
+            color:white
+
+
+        }
+        .container h1
+        {
+
+        }
+        .contact-title h2
+        {
+            color:white;
+            padding-top:100px;
+            font-size:60px;
+            margin-left:0px;
+
+
+        }
+        .contact-form
+
+        {
+
+            color:white;
+            margin-left:50px;
+
+
+
+        }
+        .form-label
+        {
+            color:white;
+            margin:5px;
+
+        }
+        .form-control
+        {
+            margin:3px;
+            padding:4px;
+        }
+
+
+
+
+    </style>
+
+<div class="jumbotron jumbotron-fluid bg-cover ">
+    <div class="row">
+        <div class="col-sm-7">
+
+
+        </div>
+
+        <div class="col-sm-5">
+            <div class="contact-title">
+                <h2>Contact</h2>
+            </div>
+                <div class="contact-form">
+                    <form class="row g-4" method="post" action="">
+                        {% csrf_token %}
+                        <div class="col-md-4">
+                            <label for="first_name" class="form-label">First Name</label>
+                            <input type="text" class="form-control is-valid" id="first_name" name ="firstname" placeholder="FirstName" required>
+
+                        </div>
+                        <div class="col-md-3">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input type="text" class="form-control is-valid" id="last_name" name="lastname" placeholder="LastName" required>
+
+                        </div>
+                        <div class="col-md-7">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                    <input type="text" class="form-control is-invalid" id="email" name="email" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="phone" class="form-control is-invalid" id="phone" name="phone" aria-describedby="validationServer05Feedback" placeholder="Phone" required>
+
+                        </div>
+                        <div class="col-md-7">
+                            <label for="Message" class="form-label">Message</label>
+                            <textarea class="form-control is-valid" type="text" id="Message" name="message" >
+                            </textarea>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-info" type="reset">Cancle</button>
+                        </div>
+                    </form>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+<div class="row">
+    <div class="col-lg-4 col-md-4">
+        <div class="card-body d-flex align-items-center c-detail pl-0">
+            <div class="mr-3 align-self-center">
+                <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png">
+            </div>
+                <div class="contact">
+                    <h6 class="font-weight-medium">Address</h6>
+                    <p class="">601 Sherwood Ave.
+                      <br> San Bernandino</p>
+                </div>
+            </div>`
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="card-body d-flex align-items-center c-detail">
+            <div class="mr-3 align-self-center">
+                <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png">
+            </div>
+            <div class="">
+                <h6 class="font-weight-medium">Phone</h6>
+                <p class="">744  944 0870
+                    <br> 630 446 8851</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="card-body d-flex align-items-center c-detail">
+            <div class="mr-3 align-self-center">
+                <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png">
+            </div>
+            <div class="">
+                <h6 class="font-weight-medium">Email</h6>
+                <p class="">
+                    sathya@web.com
+                      <br> seelan@web.com
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content%}
+
+
+<script>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</script>
+
+</body>
+</html>

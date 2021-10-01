@@ -1,0 +1,91 @@
+{% extends 'base.html '%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+{% block content %}
+<style>
+
+    .body
+   {
+    margin:0;
+    padding:0;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    transform-style:preserve-3d;
+
+  }
+
+
+
+
+ .bg-cover{
+    background-image:url('/static/banner.jpg');
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    padding: 40px;
+    margin: 0px;
+    background-position:center;
+    background-size: 100%;
+    color:white;
+}
+.container p
+{
+    padding:20px;
+    margin:20px;
+}
+.container h2
+
+    {
+        padding:10px;
+    }
+
+</style>
+
+
+
+
+<div class="jumbotron jumbotron-fluid bg-cover ">
+
+            <div class="container">
+                <h3 class="display-1 text-center" >About</h3>
+                <h5 class="text-center">Our Passion Is Your Success</h5>
+
+            </div>
+</div>
+
+<div class="container ">
+
+    <h2>Our Mission</h2>
+    <p>
+        Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+
+Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.
+    </p>
+    <h2>Our Vision</h2>
+    <p>
+        Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+
+Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.
+    </p>
+</div>
+
+
+
+{% endblock content %}
+
+
+<script >
+      <script src="{% static 'https://code.jquery.com/jquery-3.2.1.slim.min.js' %}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' %}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' %}" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</script>
+</body>
+</html>

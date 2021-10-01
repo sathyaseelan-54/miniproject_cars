@@ -1,0 +1,509 @@
+{% extends 'base.html '%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+{% block content %}
+
+<style>
+
+  .body{
+    margin:0;
+    padding:0;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    transform-style:preserve-3d;
+
+  }
+
+
+
+
+ .bg-cover{
+    background-image:url('static/rr2.jpg');
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    padding: 40px;
+    margin: 1px;
+    background-position:center;
+    background-size: 100%;
+    color:white;
+
+
+ }
+ .filter{
+    background-color:black;
+    color:white;
+
+}
+<!-----Dropdown filter option----->
+
+ .dropdown
+
+ {
+    position:relative;
+    display:inline-block;
+ }
+ .dropdown-brand
+ {
+    display:none;
+    position:absolute;
+    opacity:.4;
+    background-color:#f9f9f9f9;
+    min-width:150px;
+ }
+ .dropdown:hover .dropdown-brand
+ {
+    display:block;
+
+ }
+
+
+
+
+
+
+<!----End>
+
+ .card-thumbnail
+ {
+    min-width:240px;
+
+ }
+
+  .caption {
+
+        text-align: center;
+        color: #000;
+        padding: 6px 7px ;
+        margin: 15px;
+        font-size: 14px;
+    }
+
+
+    .card-thumbnail img {
+        width: 100%;
+    }
+    .sticky
+    {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 30px;
+      font: 90px 'Abril Fatface', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    .block-1, .block-3
+    {
+      height: 600px;
+      padding: 50px 20px;
+      background-size: cover;
+      background-image: url('static/audi2.jpg');
+      box-sizing: border-box;
+      background-position: center;
+    }
+    .block-2
+    {
+      background-image: url('static/rr5.jpg');
+      background-repeat:no-repeat;
+      background-size: fixed;
+      height: 300px;
+      background-position: center;
+    }
+    .block-3
+    {
+
+      background-image: url('static/bmw7.jpg');
+      background-position:center;
+      background-size:100%, 30%;
+    }
+
+    .jumbotron-img
+    {
+        background-color:black;
+        background-repeat:no-repeat;
+        background-attachment:scroll;
+        padding: 20px;
+        margin: 1px;
+        background-position:center;
+        background-size: 100%;
+        color:white;
+
+
+    }
+    .content-overlay
+    {
+
+        background:rgba(0,0,0,0.7);
+        position : absolute;
+        height:99%;
+        width:100%;
+        left:0;
+        top:0;
+        bottom:0;
+        right:0;
+        opacity:0;
+        -webkit-transition:all 0.4s ease-in-out0s;
+        -maz-transition:all 0.4s ease-in-out 0s;
+        transition:all 0.4s ease-in-our 0s;
+
+    }
+    .content:hover .content-overlay
+    {
+        opacity: .1;
+    }
+
+
+    .footer
+    {
+        banckground-color:black;
+        color:white;
+    }
+
+
+</style>
+                        <!----banner--->
+<div class="jumbotron jumbotron-fluid bg-cover ">
+
+            <div class="container">
+                <h1 class="display-1">Hot To Sale Deal</h1>
+                <p>Our Deal best to world top 10 deal with the top cars</p>
+                <button type="button" class="btn btn-danger">More</button>
+            </div>
+</div>
+                    <!---- end banner----->
+
+
+ <!-----------------------------filter model---------------->
+<div class="container">
+    <div class="jumbotron filter">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Brand
+
+              </button>
+                <div class="dropdown-brand" aria-labelledby="dropdownMenuButton">
+                    <p class="dropdown-item" href="#">BMW</p>
+                    <p class="dropdown-item" href="#">Audi</p>
+                    <p class="dropdown-item" href="#">Benz</p>
+                </div>
+
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Model
+
+                </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" href="#">A7</p>
+                        <p class="dropdown-item" href="#">730d</>
+                        <p class="dropdown-item" href="#">X6</p>
+                        <p class="dropdown-item" href="#">A3</p>
+                    </div>
+                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Location
+
+                </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" href="#">chennai</p>
+                        <p class="dropdown-item" href="#">Ponycherry</p>
+                        <p class="dropdown-item" href="#">kerala</p>
+                        <p class="dropdown-item" href="#">Goa</p>
+                    </div>
+                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Year
+
+                </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" href="#">2021</p>
+                        <p class="dropdown-item" href="#">2020</p>
+                        <p class="dropdown-item" href="#">2019</p>
+                        <p class="dropdown-item" href="#">2018</p>
+                    </div>
+                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Type of car
+
+                </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item" href="#">Petrol</p>
+                        <p class="dropdown-item" href="#">Descel</p>
+                    </div>
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Price
+
+                </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">10,0000</a>
+                        <a class="dropdown-item" href="#">20,0000</a>
+                    </div>
+                <button type="button" class="btn btn-dark">Finding</button>
+            </div>
+
+    </div>
+</div>
+
+ <!-----------------------------end filter model---------------->
+
+<div class="container">
+        <div class="row">
+                <div class="col-md-4">
+                        <div class="card rounded">
+                            <img src="{% static 'bmw.jpg' %}">
+                            <div class="caption">
+                                <h5>bmw x3</h5>
+                                <p>Bootstraps works with percentages. If you give it a min-width, it will break everything. You need to change the design. Maybe use two columns </p>
+                                <a href="#" type="button" class="btn btn-dark" >View</a>
+                                <a href="#" type="button" class="btn btn-warning">More</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card rounded">
+                        <img src="{% static 'city3.jpg'%}">
+                        <div class="caption">
+                            <h5>Honda city</h5>
+                            <p>Bootstraps works with percentages. If you give it a min-width, it will break everything. You need to change the design. Maybe use two columns </p>
+                             <a href="#" type="button" class="btn btn-dark" >View</a>
+                                <a href="#" type="button" class="btn btn-warning">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card rounded">
+                            <img src="{% static 'jeep4.jpg'%}">
+                            <div class="caption">
+                            <h5>Honda city</h5>
+                            <p>Bootstraps works with percentages. If you give it a min-width, it will break everything. You need to change the design. Maybe use two columns </p>
+                             <a href="#" type="button" class="btn btn-dark" >View</a>
+                                <a href="#" type="button" class="btn btn-warning">More</a>
+                        </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card rounded">
+                            <img src="{% static 'civic1.jpg' %}">
+                            <div class="caption">
+                            <h5>Honda city</h5>
+                            <p>Bootstraps works with percentages. If you give it a min-width, it will break everything. You need to change the design. Maybe use two columns </p>
+                             <a href="#" type="button" class="btn btn-dark" >View</a>
+                                <a href="#" type="button" class="btn btn-warning">More</a>
+                        </div>
+
+                        </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card rounded">
+                            <img src="{% static 'polo.jpg' %}">
+                            <div class="caption">
+                            <h5>Honda city</h5>
+                            <p>Bootstraps works with percentages. If you give it a min-width, it will break everything. You need to change the design. Maybe use two columns </p>
+                             <a href="#" type="button" class="btn btn-dark" >View</a>
+                                <a href="#" type="button" class="btn btn-warning">More</a>
+                        </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card rounded">
+                             <img src="{%static 'swift.jpg' %}">
+                            <div class="caption">
+                            <h5>Honda city</h5>
+                            <p>Bootstraps works with percentages. If you give it a min-width, it will break everything. You need to change the design. Maybe use two columns </p>
+                             <a href="#" type="button" class="btn btn-dark" >View</a>
+                                <a href="#" type="button" class="btn btn-warning">More</a>
+                        </div>
+
+                        </div>
+                </div>
+        </div>
+</div>
+
+<!--------End image------------------>
+
+
+<!----parallax image-------------->
+<!---
+<div class="block-1">
+      <div class="sticky">
+
+
+
+      </div>
+</div>
+<div class="block-2">
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ">
+
+                    <h2>Luxury Cars Rental</h2>
+
+                    <p>Pick Your  Dream Car Let's Drive..!</p>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+<div class="block-3">
+      <div class="sticky">
+
+      </div>
+</div>
+--->
+
+<!-----End----->
+
+
+<div class="jumbotron jumbotron-img">
+    <div class="container">
+                <h2 class="display-1">Luxury Car Rental</h2>
+                <p>Top 10 Luxury Car Rent Pick To Your Dream Car Let's To Drive..!</p>
+                <button type="button" class="btn btn-info">More</button>
+    </div>
+</div>
+<!-----end---->
+
+
+<div class="container">
+        <div class="row">
+                <div class="col-md-4">
+                        <div class="card rounded">
+                            <img src="{% static 'rr5.jpg' %}">
+
+                        </div>
+                </div>
+                <div class="col-md-5">
+                        <div class="card rounded">
+                            <img src="{% static 'rr4.jpg' %}">
+                            <img src="{% static 'rr6.jpeg'%}">
+
+                        </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="booking-form">
+                                <h2>Rolls Royce Ghost Car Rental</h2>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">Rolls Rolyce</th>
+                                      <th scope="col">km</th>
+                                      <th scope="col">Rent</th>
+
+                                    </tr>
+                                 </thead>
+                            <tbody>
+                                <tr>
+
+                                  <td>Ghost</td>
+                                  <td>1km</td>
+                                  <td>2500</td>
+                                </tr>
+
+                                <tr>
+
+                                  <td>Phantom</td>
+                                  <td>1km</td>
+                                  <td>2000</td>
+                                </tr>
+
+                             </tbody>
+                            </table>
+
+
+                                <form method="post" action="">
+                                    {% csrf_token %}
+                                    <div class="form">
+                                        <label for="Name">Name</label>
+                                        <input type="text" class="form-control" id="Name" name="name" placeholder="Enter your Name">
+
+                                        <label for="Email">Email</label>
+                                        <input type="email" class="form-control" id="Email" name="email" placeholder="Enter your Email">
+
+                                        <label for="Phone">Phone</label>
+                                        <input type="phone" class="form-control" id="Phone" name="phone" placeholder="Contact">
+
+                                        <label for="Model">Car Model</label>
+                                        <input type="text" class="form-control" id="Model" name="model" placeholder="Car Model">
+
+                                        <label for="DepartureDate">Departure Date</label>
+                                        <input type="datetime-local" class="form-control" id="DepartureDate" name="departuredate">
+
+                                        <label for="ReturnDate">Return Date</label>
+                                        <input type="datetime-local" class="form-control" id="ReturnDate" name="returndate">
+
+                                        <button type="submit" class="btn btn-success btn-sm" style="margin:10px 5px 3px">Booking</button>
+                                        <button type="reset" class="btn btn-danger btn-sm " style="margin:10px 5px 3px">Cancel</button>
+                                    </div>
+
+                                </form>
+                        </div>
+
+                </div>
+
+
+        </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+          <div class="card rounded">
+              <div class="content-overlay"></div>
+                <img src="{% static 'bently.jpg'%}">
+                    <div class="content-detail">
+                        <h4 class="content-title">Bently</h4>
+                            <button type="button" class="btn btn-success btn-sm">Booking</button>
+                            <a href="#" class="btn btn-danger btn-sm">View</a>
+                    </div>
+
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="card rounded">
+          <img src="{% static 'benz7.jpg'%}">
+              <div class="content-detail">
+                  <h4 class="content-title">Benz</h4>
+                    <button type="button" class="btn btn-success btn-sm">Booking</button>
+                            <a href="#" class="btn btn-danger btn-sm">View</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="card rounded">
+              <img src="{% static 'bmw6.jpg'%}">
+                    <div class="content-detail">
+                        <h4 class="content-title">Bmw</h4>
+                        <button type="button" class="btn btn-success btn-sm">Booking</button>
+                            <a href="#" class="btn btn-danger btn-sm">View</a>
+                    </div>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="jumbotron bg-dark footer">
+
+    <!-- Footer -->
+  <i class="fab fa-twitter"></i>
+</footer>
+<!-- Footer -->
+</div>
+
+{% endblock content %}
+
+<script>
+
+
+    <script src="{% static 'https://code.jquery.com/jquery-3.2.1.slim.min.js' %}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' %}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' %}" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</script>
+
+</body>
+</html>
