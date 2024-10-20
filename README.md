@@ -23,13 +23,6 @@ Contact Page:
 ![Screenshot (13)](https://user-images.githubusercontent.com/82138244/135665846-f9c3810d-ef14-458c-a251-2dc1435837c7.png)
 
   
-	
-Database:
-	This app uses a Postgres database
-
-Install:
-								pip install pyscopg2
-								python manage.py migrate
 
 Postgresql Database PgAdmin:
 
@@ -37,14 +30,6 @@ Postgresql Database PgAdmin:
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/82138244/135666017-4189206c-9e74-4dfb-99c4-87367100fd86.png)
 
-Running this project:
-To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
-
-			pip install virtualenv
-Django-cars-app's directory structure looks as follows.
-				workon cars
-				cd cars
-				cd carsite  (project_name)
 				
 				
                carsapp
